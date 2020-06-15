@@ -12,7 +12,7 @@ class NavBar extends React.Component {
 
   logUserOut = () => {
     this.props.logOut();
-    history.puch("/")
+    history.push("/")
   }
 
   toggleDropDown = () => {
@@ -37,10 +37,13 @@ class NavBar extends React.Component {
 
   render(){
     return(
+      <React.Fragment>
       <div className="navBar">
         <Link to="/" className="navLink home"><i className="fas fa-home"></i> Home</Link>
-        <Link to="/" className="navLink menu"><i className="fas fa-bars"></i> Menu</Link>
+        <Link to="/" className="navLink menu" onClick={this.toggleDropDown}><i className="fas fa-bars"></i> Menu</Link>
       </div>
+      {this.renderDropDown()}
+      </React.Fragment>
     );
   }
 }
