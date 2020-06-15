@@ -14,6 +14,10 @@ const DropDown = (props) => {
     return <div className="dropDownOption"><Link className="navLinks">test link 2</Link><hr/></div>
   }
 
+  const renderlogOut = () => {
+    return <div className="dropDownOption" onClick={props.logUserOut}><Link className="navLinks"><i className="fas fa-sign-out-alt"></i> Log Out</Link><hr/></div>
+  }
+
   // create a methor to render pre-login links i.e. login & create account
 
   // create a method to render post login links
@@ -23,6 +27,7 @@ const DropDown = (props) => {
       <React.Fragment>
         {renderTestLink1()}
         {renderTestLink2()}
+        {renderlogOut()}
       </React.Fragment>
     );
   }
