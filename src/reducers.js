@@ -1,5 +1,6 @@
 import { combineReducers } from 'redux'
 import { reducer as formReducer } from 'redux-form'
+import { navBarReducer } from './navBar/reducers'
 
 export const rootReducer = (state, action) => {
   switch (action.type) {
@@ -9,5 +10,6 @@ export const rootReducer = (state, action) => {
 }
 
 export const allReducers = combineReducers({
+  navBarState: navBarReducer,
   form: formReducer
 });
