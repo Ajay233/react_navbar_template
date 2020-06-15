@@ -15,3 +15,9 @@ export const hideDropDown = () => {
     }
   }
 }
+
+export const logOut = () => {
+  return {
+    type: "RESET_APP"
+  }
+}

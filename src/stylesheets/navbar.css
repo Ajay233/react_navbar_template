@@ -1,0 +1,19 @@
+.navBar {
+  background-color: black;
+  padding: 5px;
+  height: 25px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.menu {
+  float: right;
+}
